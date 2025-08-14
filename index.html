@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Personal Diary — Home</title>
+  <meta name="description" content="A cozy, notebook‑style personal diary with mood tracker, archives, and printable pages." />
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@400;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/print.css" media="print" />
+</head>
+<body>
+  <!-- CSS-only Dark Mode Toggle -->
+  <input type="checkbox" id="darkToggle" class="visually-hidden">
+  <div class="site" data-theme="light">
+    <header class="header">
+      <label class="dark-toggle" for="darkToggle" title="Toggle Night Mode">
+        <span class="icon-sun" aria-hidden="true"></span>
+        <span class="icon-moon" aria-hidden="true"></span>
+        <span class="sr">Toggle theme</span>
+      </label>
+      <h1 class="logo">My Personal Diary</h1>
+      <nav class="nav">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="archive.html">Archive</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="hero paper">
+        <img src="images/tape.svg" class="tape tape--left" alt="" aria-hidden="true">
+        <img src="images/tape.svg" class="tape tape--right" alt="" aria-hidden="true">
+        <h2>hey, it’s your quiet corner on the web ✍️</h2>
+        <p>Capture thoughts, track moods, and keep memories—styled like a real notebook with stickers and tape.</p>
+        <a class="btn btn-primary" href="#new-entry">Write a new entry</a>
+      </section>
+
+      <!-- Mood Tracker -->
+      <section class="mood paper">
+        <h3 class="section-title">Mood Tracker</h3>
+        <ul class="mood-grid" role="list">
+          <li data-mood="happy" title="Happy">🙂</li>
+          <li data-mood="calm" title="Calm">😌</li>
+          <li data-mood="excited" title="Excited">🤩</li>
+          <li data-mood="tired" title="Tired">🥱</li>
+          <li data-mood="sad" title="Sad">😔</li>
+          <li data-mood="angry" title="Angry">😤</li>
+          <li data-mood="grateful" title="Grateful">🙏</li>
+          <li data-mood="productive" title="Productive">💪</li>
+        </ul>
+        <p class="hint">This is a static demo—clicks won’t be saved, but you can print this page to keep a record.</p>
+      </section>
+
+      <!-- Featured Entries -->
+      <section class="entries">
+        <h3 class="section-title">Recent Entries</h3>
+        <article class="entry card paper" data-tags="life,study" data-mood="calm">
+          <img src="images/pin.svg" class="pin" alt="" aria-hidden="true">
+          <header>
+            <time datetime="2025-08-10" class="date">10 Aug 2025</time>
+            <h4>Offline afternoons and lemon tea</h4>
+          </header>
+          <p>Today I stayed away from socials and finished two chapters. Rewarded myself with a perfect lemon tea and a long walk in the evening.</p>
+          <footer class="entry-footer">
+            <span class="tag">#study</span><span class="tag">#slowday</span>
+            <a class="readmore" href="archive.html#2025-08-10">Open in Archive →</a>
+          </footer>
+        </article>
+
+        <article class="entry card paper" data-tags="friends,weekend" data-mood="excited">
+          <img src="images/pin.svg" class="pin" alt="" aria-hidden="true">
+          <header>
+            <time datetime="2025-08-05" class="date">05 Aug 2025</time>
+            <h4>Rainy bus rides & playlists</h4>
+          </header>
+          <p>Shared headphones, foggy windows, and that one chorus stuck in my head. Reminder to make a “Monsoon Mix” soon.</p>
+          <footer class="entry-footer">
+            <span class="tag">#music</span><span class="tag">#monsoon</span>
+            <a class="readmore" href="archive.html#2025-08-05">Open in Archive →</a>
+          </footer>
+        </article>
+
+        <article class="entry card paper" data-tags="fitness,habit" data-mood="productive">
+          <img src="images/pin.svg" class="pin" alt="" aria-hidden="true">
+          <header>
+            <time datetime="2025-07-27" class="date">27 Jul 2025</time>
+            <h4>Three‑set mornings</h4>
+          </header>
+          <p>Kept it simple: stretch, push‑ups, and a quick jog. Consistency over intensity—it actually works.</p>
+          <footer class="entry-footer">
+            <span class="tag">#routine</span><span class="tag">#wins</span>
+            <a class="readmore" href="archive.html#2025-07-27">Open in Archive →</a>
+          </footer>
+        </article>
+      </section>
+
+      <!-- CSS-only New Entry Modal (Demo) -->
+      <section id="new-entry" class="modal-target" aria-label="New Entry"></section>
+      <div class="modal paper" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <a href="#" class="modal-close" aria-label="Close">×</a>
+        <h3 id="modalTitle">New Entry (demo)</h3>
+        <form class="form">
+          <div class="grid-2">
+            <label>Date <input type="date" required></label>
+            <label>Mood
+              <select>
+                <option>Happy</option><option>Calm</option><option>Excited</option>
+                <option>Tired</option><option>Sad</option><option>Angry</option>
+                <option>Grateful</option><option>Productive</option>
+              </select>
+            </label>
+          </div>
+          <label>Title <input type="text" placeholder="Give your entry a title…" required></label>
+          <label>Entry
+            <textarea rows="6" placeholder="Write freely… This is a static mockup for HTML/CSS practice."></textarea>
+          </label>
+          <div class="actions">
+            <button class="btn">Save (mock)</button>
+            <a class="btn btn-ghost" href="archive.html">Go to Archive</a>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <footer class="footer paper">
+      <p>© <span id="year">2025</span> My Personal Diary. All scribbles reserved.</p>
+      <div class="social">
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="Twitter/X">X</a>
+        <a href="#" aria-label="Mail">Mail</a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- CSS-only theme binding (checkbox hack) -->
+  <style>
+    /* Bridge the checkbox state to the wrapper using the sibling selector */
+    #darkToggle:checked + .site { --theme: dark; }
+  </style>
+</body>
+</html>

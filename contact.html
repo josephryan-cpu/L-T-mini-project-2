@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Personal Diary — Contact</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@400;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <input type="checkbox" id="darkToggle" class="visually-hidden">
+  <div class="site">
+    <header class="header">
+      <label class="dark-toggle" for="darkToggle" title="Toggle Night Mode">
+        <span class="icon-sun" aria-hidden="true"></span>
+        <span class="icon-moon" aria-hidden="true"></span>
+        <span class="sr">Toggle theme</span>
+      </label>
+      <h1 class="logo">Contact</h1>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="archive.html">Archive</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="paper">
+        <h2>Say hello 👋</h2>
+        <p>Send a note or feedback (non‑functional demo form):</p>
+        <form class="form">
+          <div class="grid-2">
+            <label>Name <input type="text" placeholder="Your name" required></label>
+            <label>Email <input type="email" placeholder="you@example.com" required></label>
+          </div>
+          <label>Subject <input type="text" placeholder="What’s this about?" required></label>
+          <label>Message <textarea rows="6" placeholder="Type away…"></textarea></label>
+          <button class="btn btn-primary">Send (mock)</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer paper">
+      <p>© 2025 My Personal Diary</p>
+    </footer>
+  </div>
+</body>
+</html>

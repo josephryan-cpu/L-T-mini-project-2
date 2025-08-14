@@ -1,0 +1,5 @@
+/* Print Styles for My Personal Diary */
+* { box-sizing: border-box; }
+body { font: 12pt/1.4 Georgia, 'Times New Roman', serif; color: #222; }
+a { color: #000; text-decoration: none; }
+.date { color: #333; }

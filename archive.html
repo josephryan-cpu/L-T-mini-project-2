@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Personal Diary — Archive</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@400;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/print.css" media="print" />
+</head>
+<body>
+  <input type="checkbox" id="darkToggle" class="visually-hidden">
+  <div class="site">
+    <header class="header">
+      <label class="dark-toggle" for="darkToggle" title="Toggle Night Mode">
+        <span class="icon-sun" aria-hidden="true"></span>
+        <span class="icon-moon" aria-hidden="true"></span>
+        <span class="sr">Toggle theme</span>
+      </label>
+      <h1 class="logo">Archive</h1>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="archive.html" aria-current="page">Archive</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="filters paper">
+        <form class="form">
+          <div class="grid-3">
+            <label>Month
+              <select>
+                <option>August 2025</option>
+                <option>July 2025</option>
+                <option>June 2025</option>
+              </select>
+            </label>
+            <label>Mood
+              <select>
+                <option>All</option><option>Happy</option><option>Calm</option><option>Excited</option>
+                <option>Tired</option><option>Sad</option><option>Angry</option><option>Grateful</option><option>Productive</option>
+              </select>
+            </label>
+            <label>Tag
+              <input type="text" placeholder="e.g., study, music">
+            </label>
+          </div>
+          <p class="hint">These are visual filters only (no JavaScript). Use the search box of your browser to find keywords quickly (Ctrl/Cmd+F).</p>
+        </form>
+      </section>
+
+      <section class="timeline">
+        <article id="2025-08-10" class="entry card paper">
+          <header><time datetime="2025-08-10" class="date">10 Aug 2025</time><h4>Offline afternoons and lemon tea</h4></header>
+          <p>Stayed offline and finished two chapters. Lemon tea tasted like victory.</p>
+          <footer class="entry-footer"><span class="tag">#study</span><span class="tag">#slowday</span></footer>
+        </article>
+        <article id="2025-08-05" class="entry card paper">
+          <header><time datetime="2025-08-05" class="date">05 Aug 2025</time><h4>Rainy bus rides & playlists</h4></header>
+          <p>Foggy windows, shared songs. The city felt like a music video.</p>
+          <footer class="entry-footer"><span class="tag">#music</span><span class="tag">#monsoon</span></footer>
+        </article>
+        <article id="2025-07-27" class="entry card paper">
+          <header><time datetime="2025-07-27" class="date">27 Jul 2025</time><h4>Three‑set mornings</h4></header>
+          <p>Stretch. Push‑ups. Jog. Repeat. A tiny routine making big changes.</p>
+          <footer class="entry-footer"><span class="tag">#routine</span><span class="tag">#wins</span></footer>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer paper">
+      <p>© 2025 My Personal Diary</p>
+    </footer>
+  </div>
+</body>
+</html>
